@@ -22,9 +22,9 @@ function gameLoop() {
     if (dot.x === head.x && dot.y === head.y) {
         // eat dot
         applecount++;
-        speed = applecount;
+        speed = applecount*2;
         //speed = ((applecount)/10);
-        console.log("Apple eaten with: " + applecount + " apples eaten.");
+        //console.log("Apple eaten with: " + applecount + " apples eaten.");
         
         dot = { 
             x: Math.floor(Math.random() * (gameBoard.clientWidth / 20)) * 20, 
@@ -55,7 +55,8 @@ function gameLoop() {
 
     speedcount.innerHTML = speed.toString();
     clearTimeout(timeoutId); // clear the previous timeout
-    timeoutId = setTimeout(gameLoop, 100/speed); // set a new timeout
+    timeoutId = setTimeout(gameLoop, 100-speed); // set a new timeout
+    console.log(100-speed);
     
 }
 
@@ -70,7 +71,8 @@ function drawDot(dot, className) {
 
 let gameBoard = document.getElementById('game-board');
 
-console.log(speed);
+
+
 
 //var applecount = 
 gameLoop();
