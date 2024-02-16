@@ -6,6 +6,7 @@ let speedcount = document.getElementById('speedcount');
 var speed = 1;
 let timeoutId = null;
 start = 0
+gameboard = document.getElementById('game-board').innerHTML = speed.toString();
  // store interval ID
 function gameLoop() {
     let head = { ...snake[0] }; // copy head
@@ -36,7 +37,10 @@ function gameLoop() {
     } else {
         snake.pop(); // remove tail
     }
-
+    if (applecount == 10) {
+        gameBoard.style.backgroundColor = "red";
+        
+    }
     // clear old dots
     while (gameBoard.firstChild) {
         gameBoard.firstChild.remove();
