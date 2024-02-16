@@ -3,11 +3,21 @@
     height: 400px;
     width: 400px;
     border: 1px solid black;
+    border-radius: 5px
 }
 
-.dot {
+.apple {
     position: absolute;
     height: 20px;
     width: 20px;
-    background-color: #000;
+    background-image: url('apple_00.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.snake {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius: 20%;
 }
