@@ -38,7 +38,7 @@ function gameLoop() {
         snake.pop(); // remove tail
     }
     if (applecount == 10) {
-        gameBoard.style.backgroundColor = "red";
+        gameBoard.style.borderColor = "white";
         
     }
     // clear old dots
